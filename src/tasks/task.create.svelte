@@ -27,70 +27,60 @@
 
 </script>
 
-<section class="hero">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column is-4-desktop is-3-widescreen">
-                    <Form on:submit={ createTask } class="box" textButton="Ok">
-                        <div class="column">
-                            <div class="block">
-                                <h2>Agregar nueva tarea</h2>
-                            </div>
-                            <div class="control block">
-                                <Input bind:value={ data.name } placeholder="Nombre"></Input>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="control block">
-                                <Input bind:value={ data.description }></Input>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="control block">
-                                <InputDate bind:value={ data.date }></InputDate>
-                            </div>
-                        </div>
-                        <div class="column ">
-                            <div class="container content has-text-centered">
-                                <div class="control block">
-                                    <Button size="small" icon="bell" on:click={() => showBell = !showBell}></Button>
-                                    <Button size="small" icon="tag" on:click={() => showLabel = !showLabel}></Button>
-                                    <Button size="small" icon="user-tag" on:click={() => showCategory = !showCategory}></Button>
-                                </div>
-                                <div class="columns">
-                                    {#if showBell}
-                                        <div class="m-4 column">
-                                            <Select
-                                                options={
-                                                    ['15 minutos antes',
-                                                    '10 minutos antes',
-                                                    '5 minutos antes']}>
-                                            </Select>
-                                        </div>
-                                    {/if}
-                                    {#if showLabel}
-                                        <div class="m-5 column">
-                                            <Input bind:value={ data.label } placeholder="Etiqueta"></Input>
-                                        </div>
-                                    {/if}
-                                    {#if showCategory}
-                                        <div class="m-4 column">
-                                            <Select bind:value={ data.category }
-                                                options={
-                                                    ['Home',
-                                                    'School',
-                                                    'Work']}>
-                                            </Select>
-                                        </div>
-                                    {/if}
-                                </div>
-                            </div>
-                        </div>
-                    </Form>
-                    <Button text="Cancel"></Button>
-                </div>
+<Form on:submit={ createTask } class="box" textButton="Ok">
+    <div class="column">
+        <div class="block">
+            <h2>Agregar nueva tarea</h2>
+        </div>
+        <div class="control block">
+            <Input bind:value={ data.name } placeholder="Nombre"></Input>
+        </div>
+    </div>
+    <div class="column">
+        <div class="control block">
+            <Input bind:value={ data.description }></Input>
+        </div>
+    </div>
+    <div class="column">
+        <div class="control block">
+            <InputDate bind:value={ data.date }></InputDate>
+        </div>
+    </div>
+    <div class="column ">
+        <div class="container content has-text-centered">
+            <div class="control block">
+                <Button size="small" icon="bell" on:click={ () => showBell = !showBell }></Button>
+                <Button size="small" icon="tag" on:click={ () => showLabel = !showLabel }></Button>
+                <Button size="small" icon="user-tag" on:click={ () => showCategory = !showCategory }></Button>
+            </div>
+            <div class="columns">
+                {#if showBell}
+                    <div class="m-4 column">
+                        <Select
+                            options={
+                                ['15 minutos antes',
+                                '10 minutos antes',
+                                '5 minutos antes']}>
+                        </Select>
+                    </div>
+                {/if}
+                {#if showLabel}
+                    <div class="m-5 column">
+                        <Input bind:value={ data.label } placeholder="Etiqueta"></Input>
+                    </div>
+                {/if}
+                {#if showCategory}
+                    <div class="m-4 column">
+                        <Select bind:value={ data.category }
+                            options={
+                                ['Home',
+                                'School',
+                                'Work']}>
+                        </Select>
+                    </div>
+                {/if}
             </div>
         </div>
     </div>
-</section>
+</Form>
+<Button text="Cancel"></Button>

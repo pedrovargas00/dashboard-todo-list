@@ -30,10 +30,10 @@
             </div>
             <div class="column is-4 is-offset-1">
                 <div class="buttons">
-                    <Button size="small" icon="eye" on:click={() => TaskStore.modalRead(task) }></Button>
-                    <Button size="small" icon="code-branch" on:click={() => SubtaskStore.modalCreate() }></Button>
-                    <Button size="small" icon="pen" on:click={() => TaskStore.modalUpdate(task) }></Button>
-                    <Button size="small" icon="delete-left" on:click={() => TaskStore.modalDelete(task) }></Button>
+                    <Button size="small" icon="eye" on:click={ () => TaskStore.modalRead(task) }></Button>
+                    <Button size="small" icon="code-branch" on:click={ () => SubtaskStore.modalCreate() }></Button>
+                    <Button size="small" icon="pen" on:click={ () => TaskStore.modalUpdate(task) }></Button>
+                    <Button size="small" icon="delete-left" on:click={ () => TaskStore.modalDelete(task) }></Button>
                 </div>
             </div>
         </div>

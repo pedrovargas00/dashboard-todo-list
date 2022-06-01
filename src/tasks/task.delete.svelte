@@ -10,12 +10,7 @@
 
     const dispatch = createEventDispatcher()
 
-    let data = {}
-    let completed = false
-
     async function deleteTask() {
-        
-        data.status = completed
 
         const resp = await TasksService.deleteTask($TaskStore._id)
 

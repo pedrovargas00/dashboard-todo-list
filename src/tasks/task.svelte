@@ -15,13 +15,13 @@
     <div class="columns">
         <div class="column">
             <div class="title is-4">Description</div>
-            <div class="subtitle is-5">{ $TaskStore.description}</div>
+            <div class="subtitle is-5">{ $TaskStore.description }</div>
         </div>
     </div>
     <div class="columns">
         <div class="column">
             <div class="title is-4">Label</div>
-            <div class="subtitle is-5">{ $TaskStore.label}</div>
+            <div class="subtitle is-5">{ $TaskStore.label }</div>
         </div>
     </div>
     <div class="columns">

@@ -8,8 +8,11 @@
     import TaskCreate from '../tasks/task.create.svelte'
 
     import SubtaskCreate from '../subtasks/subtask.create.svelte'
+    import Subtasks from '../subtasks/subtasks.svelte'
+    import Subtask from '../subtasks/subtask.svelte'
 
     import Modal from '../$componentes/modal.svelte'
+    import Button from '../$componentes/button.svelte'
 
 </script>
 
@@ -27,9 +30,14 @@
 
 <Modal id="TaskRead">
     <Task />
+    <Subtasks />
+</Modal>
+
+<Modal id="TaskCreate">
+    <TaskCreate on:created={ TaskStore.modalClose }></TaskCreate>
 </Modal>
 
 <div class="container">
-    <TaskCreate></TaskCreate>
+    <Button size="small" icon="plus" on:click={ () => TaskStore.modalCreate() }></Button>
     <Tasks></Tasks>
 </div>
