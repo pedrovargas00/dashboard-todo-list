@@ -61,4 +61,6 @@
 {#if showSubtask}
     <Subtask></Subtask>
 {/if}
-
+{#if showDeleteSubtask}
+    <SubtaskDelete></SubtaskDelete>
+{/if}

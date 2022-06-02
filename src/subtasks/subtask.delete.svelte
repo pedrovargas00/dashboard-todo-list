@@ -12,7 +12,7 @@
 
     async function deleteSubtask() {
 
-        const resp = await SubtasksService.deleteTask($SubtaskStore._id)
+        const resp = await SubtasksService.deleteSubtask($SubtaskStore._id)
 
         if (resp.error)
             return error = resp.error.message
@@ -26,7 +26,6 @@
 
 {#if $SubtaskStore}
     <Form on:submit={ deleteSubtask } textButton="Sí">
-        <div class="title">¿Seguro que desea eleminar esta subtarea?</div>
-        <div class="subtitle">{ $SubtaskStore.name }</div>
+        <div class="title">¿Seguro que desea eliminar esta subtarea?</div>
     </Form>
 {/if}

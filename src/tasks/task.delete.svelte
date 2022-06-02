@@ -26,7 +26,7 @@
 
 {#if $TaskStore}
     <Form on:submit={ deleteTask } textButton="Sí">
-        <div class="title">¿Seguro que desea eleminar la tarea?</div>
+        <div class="title">¿Seguro que desea eliminar la tarea?</div>
         <div class="subtitle">{ $TaskStore.name }</div>
     </Form>
 {/if}
